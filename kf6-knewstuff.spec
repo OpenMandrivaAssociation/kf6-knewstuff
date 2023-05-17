@@ -35,6 +35,8 @@ BuildRequires: cmake(KF6Archive)
 BuildRequires: cmake(KF6Config)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6WidgetsAddons)
+BuildRequires: cmake(KF6Kirigami2)
+BuildRequires: cmake(KF6Syndication)
 Requires: %{libname} = %{EVRD}
 
 %description
