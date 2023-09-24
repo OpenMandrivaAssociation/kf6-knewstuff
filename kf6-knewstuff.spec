@@ -1,6 +1,6 @@
 %define libname %mklibname KF6NewStuff
 %define devname %mklibname KF6NewStuff -d
-%define git 20230918
+%define git 20230924
 
 Name: kf6-knewstuff
 Version: 5.240.0
