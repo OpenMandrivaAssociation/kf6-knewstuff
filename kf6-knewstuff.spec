@@ -1,6 +1,6 @@
 %define libname %mklibname KF6NewStuff
 %define devname %mklibname KF6NewStuff -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-knewstuff
 Version: 5.240.0
@@ -98,7 +98,6 @@ Framework for downloading and sharing additional application data
 %{_libdir}/cmake/KF6NewStuffCore
 %{_qtdir}/doc/KF6NewStuffCore.*
 %{_qtdir}/doc/KF6NewStuffWidgets.*
-%{_qtdir}/mkspecs/modules/qt_KNewStuffCore.pri
 
 %files -n %{libname}
 %{_libdir}/libKF6NewStuffCore.so*
