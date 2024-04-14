@@ -1,3 +1,4 @@
+%define major %(echo %{version} |cut -d. -f1-2)
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 %define libname %mklibname KF6NewStuff
@@ -5,14 +6,13 @@
 #define git 20240217
 
 Name: kf6-knewstuff
-Version: 6.0.0
-Release: %{?git:0.%{git}.}3
+Version: 6.1.0
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/knewstuff/-/archive/master/knewstuff-master.tar.bz2#/knewstuff-%{git}.tar.bz2
 %else
-Source0: https://download.kde.org/%{stable}/frameworks/%{version}/knewstuff-%{version}.tar.xz
+Source0: https://download.kde.org/%{stable}/frameworks/%{major}/knewstuff-%{version}.tar.xz
 %endif
-Patch0: https://invent.kde.org/frameworks/knewstuff/-/commit/49f2037ac22fcb430fadd5d7b29bd8af234573a4.patch
 Summary: Framework for downloading and sharing additional application data
 URL: https://invent.kde.org/frameworks/knewstuff
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0
